@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elizaveta Nurdaeva — CV</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: #e8eaf0;
+    color: #222;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 20px auto;
+    background: #f0f2f7;
+    padding: 30px 35px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+  }
+
+  @media print {
+    body { background: #fff; }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      width: 100%;
+      min-height: auto;
+      padding: 20px 25px;
+    }
+  }
+
+  /* HEADER */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    gap: 20px;
+  }
+
+  .header-text {
+    flex: 1;
+  }
+
+  .header h1 {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #1a1a2e;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+
+  .header .subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 10px;
+  }
+
+  .contact-row {
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    color: #444;
+    flex-wrap: wrap;
+  }
+
+  .contact-row span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .photo-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  .photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* MAIN LAYOUT */
+  .main {
+    display: flex;
+    gap: 30px;
+  }
+
+  .left-col {
+    flex: 1.4;
+    min-width: 0;
+  }
+
+  .right-col {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* SECTION HEADERS */
+  .section-title {
+    font-size: 15px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #1a1a2e;
+    border-bottom: 2.5px solid #1a1a2e;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+  }
+
+  /* JOB ENTRY */
+  .job-entry {
+    margin-bottom: 18px;
+  }
+
+  .job-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+
+  .job-company {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .job-meta {
+    font-size: 11.5px;
+    color: #777;
+    margin-bottom: 6px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .job-meta span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .job-entry ul {
+    list-style: disc;
+    padding-left: 18px;
+    margin-top: 4px;
+  }
+
+  .job-entry ul li {
+    margin-bottom: 3px;
+    font-size: 12.5px;
+    color: #333;
+    line-height: 1.45;
+  }
+
+  /* CAREER BREAK */
+  .break-text {
+    font-size: 12.5px;
+    color: #444;
+    line-height: 1.5;
+  }
+
+  /* RIGHT COLUMN SECTIONS */
+  .right-col .section-title {
+    margin-top: 18px;
+  }
+
+  .right-col .section-title:first-child {
+    margin-top: 0;
+  }
+
+  .profile-text {
+    font-size: 12.5px;
+    color: #333;
+    line-height: 1.55;
+    margin-bottom: 10px;
+  }
+
+  .skills-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .skills-list li {
+    font-size: 12.5px;
+    color: #333;
+    margin-bottom: 6px;
+    line-height: 1.45;
+    padding-left: 15px;
+    position: relative;
+  }
+
+  .skills-list li:before {
+    content: "•";
+    color: #2563eb;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+
+  .edu-entry {
+    margin-bottom: 12px;
+  }
+
+  .edu-degree {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #1a1a2e;
+  }
+
+  .edu-school {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .edu-year {
+    font-size: 11.5px;
+    color: #777;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .cert-list {
+    list-style: disc;
+    padding-left: 18px;
+  }
+
+  .cert-list li {
+    font-size: 12.5px;
+    color: #333;
+    margin-bottom: 5px;
+    line-height: 1.45;
+  }
+
+  .cert-list li strong {
+    color: #1a1a2e;
+  }
+
+  .cert-ref {
+    font-size: 10.5px;
+    color: #888;
+    display: block;
+    margin-top: 1px;
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER WITH PHOTO -->
+  <div class="header">
+    <div class="header-text">
+      <h1>Elizaveta Nurdaeva</h1>
+      <div class="subtitle">English Teacher for Young Learners (ages 5–14) — Si Ri Panya</div>
+      <div class="contact-row">
+        <span>📧 ea.nurdaeva@gmail.com</span>
+        <span>📞 +66 91 70 372 91</span>
+        <span> Koh Phangan, Thailand</span>
+      </div>
+    </div>
+    <div class="photo-container">
+      <img src="photo.jpg" alt="Elizaveta Nurdaeva">
+    </div>
+  </div>
+
+  <!-- MAIN TWO-COLUMN LAYOUT -->
+  <div class="main">
+
+    <!-- LEFT COLUMN: WORK EXPERIENCE -->
+    <div class="left-col">
+
+      <div class="section-title">Work Experience</div>
+
+      <!-- Job 1 -->
+      <div class="job-entry">
+        <div class="job-title">English Teacher</div>
+        <div class="job-company">Language Link, Moscow</div>
+        <div class="job-meta">
+          <span>📅 September 2024 – June 2026</span>
+        </div>
+        <ul>
+          <li>Taught English to children aged 6–14 following the school's programmes and standards (Macmillan materials), adapting activities to different ages and levels</li>
+          <li>Led interactive lessons using Zoom, Miro, Wordwall, Super Simple and Twinkl</li>
+          <li>Designed supplementary materials in Canva and Figma to match lesson content and individual pupils' needs</li>
+          <li>Organised themed lessons and quests to keep pupils motivated and engaged</li>
+          <li>Gave parents regular feedback on progress, with recommendations and ongoing support; worked closely with the methodologist and colleagues</li>
+          <li>Kept to a strict schedule: punctual and consistently available during working hours</li>
+        </ul>
+      </div>
+
+      <!-- Job 2 -->
+      <div class="job-entry">
+        <div class="job-title">English Teacher</div>
+        <div class="job-company">ABC Lab | Cherryville</div>
+        <div class="job-meta">
+          <span> September 2022 – June 2024</span>
+        </div>
+        <ul>
+          <li>Taught in-person groups of 5–10 children aged 5–12, as well as individual lessons, using Cambridge ELT programmes and school standards</li>
+          <li>Planned and ran themed lessons and events for Halloween, Thanksgiving, Christmas and Easter</li>
+          <li>Used games, visual materials and interactive tasks (including Wordwall and Miro) to keep young learners engaged</li>
+          <li>Adapted tasks and lesson format to the age and level of each group</li>
+          <li>Held parent feedback meetings every 2–3 months and answered parents' messages in the group chat twice a week</li>
+        </ul>
+      </div>
+
+      <!-- Career Break -->
+      <div class="job-entry">
+        <div class="job-title">Career Break — Family</div>
+        <div class="job-meta">
+          <span>📅 2015 – 2022</span>
+        </div>
+        <div class="break-text">
+          Full-time parenting. Completed professional development courses and independently studied modern teaching methodology and online teaching tools before returning to the profession in 2022.
+        </div>
+      </div>
+
+      <!-- Job 3 -->
+      <div class="job-entry">
+        <div class="job-title">Extracurricular Activities Tutor</div>
+        <div class="job-company">Peoples' Friendship University of Russia (RUDN), Moscow</div>
+        <div class="job-meta">
+          <span>📅 February 2013 – February 2015</span>
+        </div>
+        <ul>
+          <li>Advised students and parents on adaptation and the educational process</li>
+          <li>Organised educational and extracurricular activities: excursions, competitions, report concerts</li>
+          <li>Worked with faculty teachers and department staff</li>
+          <li>Collected and structured information for the faculty website</li>
+        </ul>
+      </div>
+
+      <!-- Job 4 -->
+      <div class="job-entry">
+        <div class="job-title">Educational Tutor</div>
+        <div class="job-company">Peoples' Friendship University of Russia (RUDN), Moscow</div>
+        <div class="job-meta">
+          <span> September 2010 – July 2012</span>
+        </div>
+        <ul>
+          <li>Helped new students adapt to university life and study</li>
+          <li>Maintained and structured the student database</li>
+          <li>Organised extracurricular activities, excursions and trips</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="right-col">
+
+      <!-- PROFESSIONAL PROFILE -->
+      <div class="section-title">Professional Profile</div>
+      <p class="profile-text">
+        Warm, reliable English teacher with four years of experience teaching children aged 5–14, including in-person group classes of 5–10 pupils. Skilled at adapting Cambridge and Macmillan course materials to the age and level of each group, creating her own visual and interactive resources, and keeping families closely informed.
+      </p>
+      <p class="profile-text">
+        About 80% of students (8 in 10) continue their classes over time; those who leave do so mainly because their families relocate. Seeking a long-term role in a small, community-focused international school.
+      </p>
+
+      <!-- KEY SKILLS -->
+      <div class="section-title">Key Skills</div>
+      <ul class="skills-list">
+        <li>Teaching English to young learners (ages 5–14), in groups and one-to-one</li>
+        <li>Cambridge ELT and Macmillan course materials; adapting tasks to age and level</li>
+        <li>Game-based, visual and storytelling-based teaching</li>
+        <li>Creating resources: Canva, Figma, Wordwall, Miro; AI-assisted game design</li>
+        <li>Regular communication with parents: feedback meetings and daily messaging</li>
+        <li>Planning themed lessons and events (Halloween, Thanksgiving, Christmas, Easter)</li>
+        <li>Languages: Russian (native); English — [add IELTS score / CEFR level]</li>
+      </ul>
+
+      <!-- EDUCATION -->
+      <div class="section-title">Education</div>
+
+      <div class="edu-entry">
+        <div class="edu-degree">Professional Retraining: English Language Teacher</div>
+        <div class="edu-school">Moscow Academy of Professional Competencies</div>
+        <div class="edu-year">📅 2022</div>
+      </div>
+
+      <div class="edu-entry">
+        <div class="edu-degree">Marketing</div>
+        <div class="edu-school">Peoples' Friendship University of Russia (RUDN)</div>
+        <div class="edu-year">📅 2012</div>
+      </div>
+
+      <div class="edu-entry">
+        <div class="edu-degree">Translator in Professional Communication</div>
+        <div class="edu-school">Peoples' Friendship University of Russia (RUDN)</div>
+        <div class="edu-year">📅 2010</div>
+      </div>
+
+      <!-- CERTIFICATES -->
+      <div class="section-title">Certifications</div>
+      <ul class="cert-list">
+        <li>
+          <strong>GA Level 3 Award in Teaching English to Young Learners (TEFL)</strong> — Gatehouse Awards / Dream School, 2026
+          <span class="cert-ref">Award Date: 04/08/2026 | Candidate Ref: BJA58171 | Certificate Ref: GA/Q/2026/6645575</span>
+        </li>
+        <li>
+          <strong>Teaching English to Young Learners</strong> — George Mason University, 2024
+        </li>
+        <li>
+          <strong>Multimedia Design and Use in the English Language Classroom</strong> — The Regional English Language Office (RELO), 2026
+        </li>
+        <li>
+          <strong>Creating Games with AI</strong> — Online Course, 2026
+        </li>
+        <li>
+          <strong>Storytelling with Children</strong> — Online Course, 2026
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
